@@ -24,6 +24,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.index, name = "index"),
     path('saludo/', views.saludo, name = "saludo"),
-    path('persona/', views.persona, name = "persona"),
+    path('persona/', views.personas, name='persona'),
+    path('agregar_persona/', views.agregar_persona, name='agregar_persona'),
+    path('eliminar_persona/<int:id>/', views.eliminar_persona, name='eliminar_persona'),
 
 ]
