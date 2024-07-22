@@ -15,6 +15,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from datetime import datetime
 from .models import Fernandez_Persona
+from .forms import PersonaForm
 
 def personas(request):
     personas = Fernandez_Persona.objects.all()
@@ -43,3 +44,16 @@ def eliminar_persona(request, id):
     messages.success(request, f'Se eliminó correctamente la persona {persona.nombre} {persona.apellidos}')
     return redirect('persona')
 
+def editar_persona(request, id):
+    persona = get_object_or_404(Fernandez_Persona, id=id)
+    
+    if request.method == 'POST':
+        form = PersonaForm(request.POST, instance=persona)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Persona actualizada correctamente.')
+            return redirect('persona')
+    else:
+        form = PersonaForm(instance=persona)
+    
+    return render(request, 'editar_persona.html', {'form': form})

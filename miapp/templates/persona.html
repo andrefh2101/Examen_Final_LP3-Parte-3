@@ -8,6 +8,7 @@
             Sexo: {{ persona.sexo }} - 
             Fecha de registro: {{ persona.fecha_de_registro }} - 
             <a href="{% url 'eliminar_persona' id=persona.id %}" class="btn btn-delete">Eliminar</a>
+            <a href="{% url 'editar_persona' id=persona.id %}" class="btn btn-edit">Editar</a>
         </li>
     {% endfor %}
 </ul>
