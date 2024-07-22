@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    margin: 0;
+    height: 100%;
+  }
+  
+  body {
+    font-family: "GT America Trial", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .topbar {
+    background-color: rgb(17, 92, 189);
+    padding: 0 30px;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (max-width: 1200px) {
+    .topbar {
+      padding: 0px 0px;
+    }
+  }
+  .topbar-inner {
+    color: white;
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topbar-inner a {
+    text-decoration: none;
+    color: white;
+  }
+  .topbar-inner img{
+    display: block;
+    width: 45px;
+    float: left;
+    margin-top: 20px;
+  }
+  .topbar-inner__logo {
+    height: 2rem;
+    transition: all 0.3s ease;
+  }
+  .topbar-inner__logo:hover {
+    opacity: 0.7;
+  }
+  .topbar-inner__helpcenter {
+    padding-left: 1rem;
+    text-align: center;
+    position: relative;
+    top: 0.1em;
+    border-left: 2px solid white;
+    transition: all 0.3s ease;
+  }
+  .topbar-inner__helpcenter:hover {
+    text-decoration: underline;
+  }
+  .topbar-inner__submit {
+    margin-left: auto;
+    border: 1px solid white;
+    background-color: #191a1b;
+  }
+  .topbar-inner__signin {
+    background-color: #cec434;
+    transition: all 0.3s ease;
+  }
+  .topbar-inner__signin:hover {
+    background-color: #fff;
+    color: #000000;
+  }
+  .topbar-inner__signin, .topbar-inner__submit {
+    border-radius: 8px;
+    padding: 0.375em 1.375em;
+    padding-top: 0.45em;
+    vertical-align: middle;
+  }
+  .topbar-inner__search, .topbar-inner__menu {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    .topbar-inner__signin, .topbar-inner__submit {
+      display: none;
+    }
+    .topbar-inner__search, .topbar-inner__menu {
+      display: flex !important;
+    }
+    .topbar-inner__search {
+      margin-left: auto;
+    }
+    .topbar-inner__menu {
+      flex-direction: column;
+      gap: 5px;
+    }
+    .topbar-inner__button-lines {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 23px;
+    }
+  }
+  @media (max-width: 500px) {
+    .topbar-inner {
+      gap: 0.3rem;
+    }
+    .topbar-inner__helpcenter {
+      padding-left: 0.3rem;
+    }
+  }
+  
+  .help {
+    padding: 80px 30px 115px 30px;
+    background-color: #dadbf1;
+  }
+  .help__title {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 5rem;
+    letter-spacing: -4px;
+    margin: 1rem;
+  }
+  .help__form {
+    width: 100%;
+  }
+  .help__input {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    border-radius: 4px;
+    line-height: 2.1rem;
+    transition: all 0.3s ease;
+  }
+  .help__arrowsvg {
+    width: 1.75em;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: all 0.3s ease;
+  }
+  .help__arrowsvg:hover, .help__input:hover {
+    fill: #4C5FD5;
+    border-color: #4C5FD5;
+  }
+  @media (max-width: 700px) {
+    .help__title {
+      font-size: 3.8rem;
+    }
+  }
+  @media (max-width: 500px) {
+    .help__title {
+      font-size: 2.8rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .help {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+    }
+  }
+  .help-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  .list {
+    margin-top: 8rem;
+    margin-bottom: 7rem;
+  }
+  .list__item img {
+    max-height: 88px;
+  }
+  .list__item p {
+    font-size: 1.45rem;
+  }
+  .list__item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .list__item a {
+    color: #4C5FD5;
+    font-size: 1.25rem;
+  }
+  .list__item {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  @media (max-width: 700px) {
+    .list {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .list__item img {
+      max-height: 65px;
+    }
+    .list__item p {
+      font-size: 1.35rem;
+    }
+    .list__item h3 {
+      font-size: 1.4rem;
+    }
+  }
+  .list-inner {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4em;
+  }
+  
+  @media (max-width: 1000px) {
+    .list-inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  padding: 0.1rem 0; /* Reducir padding superior e inferior */
+  background-color: rgb(17, 92, 189);
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer h3,
+.footer h4,
+.footer a,
+.footer p {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a,
+.footer p {
+  line-height: 1.5rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-inner {
+  margin: 0 auto;
+  padding-right: 200px;
+  padding-bottom: 1rem; /* Reducir padding inferior */
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  position: relative;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column-copyright {
+  position: absolute;
+  margin-top: auto;
+  bottom: 10px; /* Reducir distancia desde la parte inferior */
+  right: 10px;
+}
+
+.footer__column-copyright__logo {
+  margin-bottom: 1rem; /* Reducir margen inferior del logo */
+  width: 80px; /* Reducir tamaño del logo */
+  height: 80px;
+}
+
+.footer__column-copyright p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .footer {
+      padding: 1rem 0 1rem 0 !important;
+  }
+  .footer .footer-inner {
+      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__column-copyright {
+      position: relative;
+      bottom: 0;
+      right: 0;
+  }
+  .help-button {
+      padding: 12px !important;
+  }
+  .help-button__text {
+      display: none !important;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.cdnfonts.com/css/gt-america-trial" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+
+    <title>Abstract Clone</title>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <img src="{% static 'img/Untels_01.png' %}" viewBox="0 0 32 32"><defs><style>.cls-1{fill:#fff}</style></defs><g id="computer"><path class="cls-1" d="M27.14 3H4.86A2.86 2.86 0 0 0 2 5.86V8a1 1 0 0 0 2 0V5.86A.87.87 0 0 1 4.86 5h22.28a.87.87 0 0 1 .86.86v15.28a.87.87 0 0 1-.86.86H4.86a.87.87 0 0 1-.86-.86V20h21a1 1 0 0 0 0-2H4v-6a1 1 0 0 0-2 0v9.14A2.86 2.86 0 0 0 4.86 24h7.22a8.7 8.7 0 0 1-.08 1.84 8.53 8.53 0 0 1-.63 2.16H10a1 1 0 0 0 0 2h12a1 1 0 0 0 0-2h-1.37a8.53 8.53 0 0 1-.63-2.16 8.7 8.7 0 0 1-.08-1.84h7.22A2.86 2.86 0 0 0 30 21.14V5.86A2.86 2.86 0 0 0 27.14 3zM18 26.16a10.57 10.57 0 0 0 .48 1.84h-5a10.57 10.57 0 0 0 .52-1.84 11.19 11.19 0 0 0 .11-2.16h3.78a11.19 11.19 0 0 0 .11 2.16z"/><path class="cls-1" d="M11.25 15.66A1 1 0 0 0 12 16a1 1 0 0 0 .66-.25l8-7a1 1 0 1 0-1.32-1.5l-8 7a1 1 0 0 0-.09 1.41zM13 8a1 1 0 0 0-1-1 1 1 0 1 0 1 1zM20 14a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></g></svg>
+            
+            <a class="topbar-inner__helpcenter" href="#"></a>
+            <a class="topbar-inner__search" href="#">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    style="fill: rgb(255, 255, 255);">
+                    <path
+                        d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z">
+                    </path>
+                </svg>
+
+            </a>
+            <a class="topbar-inner__signin" href="/saludo">Saludo</a>
+            <a class="topbar-inner__signin" href="/persona">Persona</a>
+
+        </div>
+    </header>
+    <main>
+        {% block content %}
+
+
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer__column">
+                <h3>Personas</h3>
+                <a href="#">Fernandez</a>
+            </div>
+            <div class="footer__column">
+                <h3>Profesora</h3>
+                <a href="#">Flor Cerdan</a>
+            </div>
+            
+            <div class="footer__column footer__column-copyright">
+                
+                
+                <p>© Copyright 2024</p>
+                <p>All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
